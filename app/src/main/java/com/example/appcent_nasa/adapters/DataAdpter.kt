@@ -35,7 +35,7 @@ class DataAdpter(private var dataList: ArrayList<DataModel>, private val context
         }
         holder.name.text=dataModel.title
         holder.rating.text=dataModel.id
-        holder.released.text=dataModel.body
+        holder.released.text=dataModel.id
         holder.releaseds.text=dataModel.body
 
     }
