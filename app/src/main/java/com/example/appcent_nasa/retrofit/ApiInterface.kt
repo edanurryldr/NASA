@@ -7,6 +7,9 @@ import retrofit2.http.Path
 
 interface ApiInterface {
 
+    /*@GET("mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY&page=1")
+    fun getPhotos(): Call<List<DataModel>>*/
+
     @GET("posts")
     fun getPhotos(): Call<List<DataModel>>
 

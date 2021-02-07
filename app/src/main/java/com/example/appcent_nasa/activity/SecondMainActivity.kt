@@ -11,7 +11,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class SecondMainActivity : AppCompatActivity() {
-    var dataList = ArrayList<DataModel>()
+    //var dataList = ArrayList<DataModel>()
 
     private lateinit var getToData: DataModel
 

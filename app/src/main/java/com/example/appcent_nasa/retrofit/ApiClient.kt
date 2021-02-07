@@ -9,6 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 object ApiClient {
 
     var BASE_URL:String="https://jsonplaceholder.typicode.com/"
+    //var BASE_URL:String="https://api.nasa.gov/"
     val getClient: ApiInterface
         get() {
 
