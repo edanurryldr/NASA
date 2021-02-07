@@ -26,6 +26,7 @@ class SecondMainActivity : AppCompatActivity() {
             titleTextView1=findViewById(R.id.textView3)
             titleTextView2=findViewById(R.id.textView4)
 
+        
         getToData = intent.getSerializableExtra("sendToData")as DataModel
         titleTextView.setText(getToData.id)
         titleTextView1.setText(getToData.title)
