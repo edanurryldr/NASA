@@ -1,16 +1,10 @@
 package com.example.appcent_nasa.model
 
-import com.google.gson.annotations.Expose
-import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
-data class DataModel(
-
-    @SerializedName("userId")
-    var userId: kotlin.Int,
-    @SerializedName("id")
-    var id: String,
-    @SerializedName("title")
-    val title: String,
-    @SerializedName("body")
-    val body: String
-)
+data class DataModel
+    (var userId:Int,
+     var id:String,
+     var title:String,
+     var body:String): Serializable {
+}

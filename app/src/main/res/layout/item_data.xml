@@ -9,40 +9,44 @@
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
-        android:layout_height="290dp"
+        android:layout_height="256dp"
+        android:layout_marginBottom="-55dp"
         app:srcCompat="@drawable/image2" />
 
     <ImageView
         android:id="@+id/begen"
         android:layout_width="60dp"
-        android:onClick="begen"
-        android:layout_marginLeft="350dp"
-        android:layout_marginTop="-60dp"
         android:layout_height="60dp"
-        app:srcCompat="@drawable/begen" />
+        android:layout_marginLeft="303dp"
+        android:layout_marginBottom="50dp"
+        android:onClick="begen"
+        app:srcCompat="@drawable/ic_favorite_black_24dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_marginTop="20dp"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
-            android:layout_height="46dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
             android:text="TextView" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
-            android:layout_height="38dp"
+            android:textColor="@color/gray"
+            android:layout_height="wrap_content"
             android:text="TextView" />
 
         <TextView
             android:id="@+id/textView4"
+            android:textColor="@color/black"
             android:layout_width="match_parent"
-            android:layout_height="46dp"
+            android:layout_height="wrap_content"
             android:text="TextView" />
 
 

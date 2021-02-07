@@ -1,19 +1,24 @@
 package com.example.appcent_nasa.adapters
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appcent_nasa.R
+import com.example.appcent_nasa.activity.SecondMainActivity
 import com.example.appcent_nasa.model.DataModel
 
-class DataAdpter(private var dataList: List<DataModel>, private val context: Context) : RecyclerView.Adapter<DataAdpter.ViewHolder>() {
+
+class DataAdpter(private var dataList: ArrayList<DataModel>, private val context: Context) : RecyclerView.Adapter<DataAdpter.ViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(LayoutInflater.from(context).inflate(R.layout.list_item_home, parent, false))
+
     }
 
     override fun getItemCount(): Int {
@@ -23,20 +28,32 @@ class DataAdpter(private var dataList: List<DataModel>, private val context: Con
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val dataModel=dataList.get(position)
 
-        holder.titleTextView.text=dataModel.title
-        holder.titleTextView1.text=dataModel.id
-        holder.titleTextView2.text=dataModel.body
+        holder.moreBtn.setOnClickListener{
+            var intent = Intent(context,SecondMainActivity::class.java)
+            intent.putExtra("sendToData",dataModel)
+            context.startActivity(intent)
+        }
+        holder.name.text=dataModel.title
+        holder.rating.text=dataModel.id
+        holder.released.text=dataModel.body
+        holder.releaseds.text=dataModel.body
+
     }
 
     class ViewHolder(itemLayoutView: View) : RecyclerView.ViewHolder(itemLayoutView) {
-        lateinit var titleTextView: TextView;
-        lateinit var titleTextView1: TextView;
-        lateinit var titleTextView2: TextView;
+         var name: TextView;
+         var rating: TextView;
+         var released: TextView;
+         var releaseds: TextView;
+         var moreBtn: ImageButton;
+
         init {
-            titleTextView=itemLayoutView.findViewById(R.id.title)
-            titleTextView1=itemLayoutView.findViewById(R.id.url)
-            titleTextView2=itemLayoutView.findViewById(R.id.url_txt)
-        itemView.setOnClickListener{}
+            name=itemLayoutView.findViewById(R.id.title)
+            rating=itemLayoutView.findViewById(R.id.url)
+            released=itemLayoutView.findViewById(R.id.url_txt)
+            releaseds=itemLayoutView.findViewById(R.id.urll)
+            moreBtn=itemLayoutView.findViewById(R.id.moreBtn)
+
         }
 
     }
