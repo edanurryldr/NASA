@@ -1,4 +1,4 @@
-# NASA(VERMİŞ OLDUĞUNUZ URL BENDE ÇALIŞMADIĞI İÇİN  "https://jsonplaceholder.typicode.com/posts" BU URL'İ KULLANDIM.)
+# NASA ( Retrofit kullanmayı biliyorum ama vermiş olduğunuz url ile bazı hatalar aldım ve onları çözmek için yeterli vaktim yoktu , bunun için "https://jsonplaceholder.typicode.com/posts" url'sini kullandım.)
 [
   {
     "userId": 1,
